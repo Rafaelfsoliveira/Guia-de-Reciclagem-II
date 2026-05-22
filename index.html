@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Interativo da Reciclagem</title>
+    <style>
+        /* Reset e Configurações Globais */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f9f4;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Seção de Introdução Informativa */
+        .info-section {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 6px solid #11998e;
+        }
+
+        .info-section h3 {
+            color: #11998e;
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+        }
+
+        .info-section ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        /* Grid das Lixeiras */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Card da Lixeira */
+        .lixeira {
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
+        }
+
+        .lixeira:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        /* Banner de Cor Superior de cada Lixeira */
+        .lixeira-header {
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Estilo para as Imagens Digitais (SVGs) */
+        .lixeira-icon {
+            width: 70px;
+            height: 70px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        /* Conteúdo do Card */
+        .lixeira-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .lista-itens {
+            margin: 15px 0;
+            padding-left: 20px;
+            font-size: 0.95rem;
+        }
+
+        .lista-itens li {
+            margin-bottom: 5px;
+        }
+
+        /* Caixa de Alerta Diferenciada */
+        .alerta {
+            background-color: #fff5f5;
+            border: 1px dashed #feb2b2;
+            color: #c53030;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-top: 15px;
+        }
+
+        /* Cores Temáticas Oficiais */
+        .papel .lixeira-header { background-color: #2563eb; } /* Azul */
+        .plastico .lixeira-header { background-color: #dc2626; } /* Vermelho */
+        .vidro .lixeira-header { background-color: #16a34a; } /* Verde */
+        .metal .lixeira-header { background-color: #eab308; } /* Amarelo */
+        .organico .lixeira-header { background-color: #78350f; } /* Marrom */
+
+        /* Rodapé */
+        footer {
+            background-color: #2d3748;
+            color: #a0aec0;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        footer strong {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>♻️ Guia Interativo da Reciclagem ♻️</h1>
+        <p>Descubra como separar corretamente cada tipo de resíduo. Pequenas ações geram grandes transformações no nosso planeta!</p>
+    </header>
+
+    <section class="info-section">
+        <h3>💡 Por que reciclar é tão importante?</h3>
+        <p>A reciclagem reduz a extração de novos recursos da natureza, economiza água e energia, e diminui o volume de lixo nos aterros. Antes de descartar, lembre-se da regra de ouro: <strong>Lave as embalagens!</strong> Restos de comida e líquidos podem estragar materiais que seriam reciclados.</p>
+        <ul>
+            <li><strong>Dica Ecológica:</strong> Tente aplicar os 3 R's no seu dia a dia: 1º Reduzir o consumo, 2º Reutilizar o que for possível, e só então, 3º Reciclar!</li>
+        </ul>
+    </section>
+
+    <main class="container">
+        
+        <div class="lixeira papel">
+            <div class="lixeira-header">📄 PAPEL</div>
+            
+            <svg class="lixeira-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 7H17M7 12H17M7 17H13" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <div class="lixeira-body">
+                <div>
+                    <p><strong>O que PODE descartar:</strong></p>
+                    <ul class="lista-itens">
+                        <li>Caixas de papelão desarmadas;</li>
+                        <li>Cadernos antigos, folhas de papel e rascunhos;</li>
+                        <li>Embalagens de papel, jornais e revistas.</li>
+                    </ul>
+                </div>
+                <div class="alerta">
+                    <strong>⚠️ NÃO jogue aqui:</strong> Papel higiênico usado, guardanapos sujos, fotografias e fitas adesivas.
+                </div>
+            </div>
+        </div>
+
+        <div class="lixeira plastico">
+            <div class="lixeira-header">🥤 PLÁSTICO</div>
+            
+            <svg class="lixeira-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 3H18L17 9H7L6 3Z" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 9L8.5 21H15.5L17 9" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <div class="lixeira-body">
+                <div>
+                    <p><strong>O que PODE descartar:</strong></p>
+                    <ul class="lista-itens">
+                        <li>Garrafas PET de refrigerante e água;</li>
+                        <li>Sacolas plásticas e potes de alimentos limpos;</li>
+                        <li>Embalagens de shampoo, detergente e cremes.</li>
+                    </ul>
+                </div>
+                <div class="alerta">
+                    <strong>⚠️ NÃO jogue aqui:</strong> Embalagens metalizadas (como saquinhos de salgadinho ou batata), tomadas e fraldas descartáveis.
+                </div>
+            </div>
+        </div>
+
+        <div class="lixeira vidro">
+            <div class="lixeira-header">🍾 VIDRO</div>
+            
+            <svg class="lixeira-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 3V6M16 3V6M7 9H17L16 21H8L7 9Z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <div class="lixeira-body">
+                <div>
+                    <p><strong>O que PODE descartar:</strong></p>
+                    <ul class="lista-itens">
+                        <li>Garrafas de vidro de bebidas vazias;</li>
+                        <li>Potes de conserva (como maionese ou azeitona);</li>
+                        <li>Copos e frascos de vidro transparentes ou coloridos.</li>
+                    </ul>
+                </div>
+                <div class="alerta">
+                    <strong>⚠️ NÃO jogue aqui:</strong> Espelhos, lâmpadas, óculos, cerâmicas, porcelanas e vidros de janela quebrados.
+                </div>
+            </div>
+        </div>
+
+        <div class="lixeira metal">
+            <div class="lixeira-header">🥫 METAL</div>
+            
+            <svg class="lixeira-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 6V18C19 19.6569 15.866 21 12 21C8.13401 21 5 19.6569 5 18V6M19 6C19 7.65685 15.866 9 12 9C8.13401 9 5 7.65685 5 6M19 6C19 4.34315 15.866 3 12 3C8.13401 3 5 4.34315 5 6" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <div class="lixeira-body">
+                <div>
+                    <p><strong>O que PODE descartar:</strong></p>
+                    <ul class="lista-itens">
+                        <li>Latas de alumínio (refrigerantes e sucos);</li>
+                        <li>Latas de conserva (milho, molho de tomate, sardinha);</li>
+                        <li>Tampas metálicas, pregos, parafusos e panelas velhas.</li>
+                    </ul>
+                </div>
+                <div class="alerta">
+                    <strong>⚠️ NÃO jogue aqui:</strong> Pilhas, baterias, latas de tinta, latas de aerossol (desodorante) e esponjas de aço.
+                </div>
+            </div>
+        </div>
+
+        <div class="lixeira organico">
+            <div class="lixeira-header">🍎 ORGÂNICO</div>
+            
+            <svg class="lixeira-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z" stroke="#78350f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 6V12L16 14" stroke="#78350f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <div class="lixeira-body">
+                <div>
+                    <p><strong>O que PODE descartar:</strong></p>
+                    <ul class="lista-itens">
+                        <li>Cascas de frutas, verduras e legumes;</li>
+                        <li>Restos de refeições e alimentos;</li>
+                        <li>Pó de café usado, saquinhos de chá e folhas secas.</li>
+                    </ul>
+                </div>
+                <div class="alerta">
+                    <strong>⚠️ NÃO jogue aqui:</strong> Embalagens recicláveis, óleos de cozinha, medicamentos e dejetos de animais de estimação.
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Projeto Desenvolvido por <strong>[Nome do Aluno]</strong> — Aula de Tecnologia & Sustentabilidade</p>
+    </footer>
+
+</body>
+</html>

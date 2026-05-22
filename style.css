@@ -1,0 +1,63 @@
+/* Configurações Gerais da Página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0fdf4; /* Um verde bem clarinho */
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #22c55e; /* Verde reciclagem */
+    color: white;
+    padding: 20px;
+}
+
+/* Organização das lixeiras lado a lado */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+/* Estilo padrão de todas as lixeiras */
+.lixeira {
+    width: 200px;
+    padding: 20px;
+    border-radius: 15px; /* Bordas arredondadas para parecer uma lixeira */
+    color: white;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s; /* Efeito ao passar o mouse */
+}
+
+/* Efeito interativo: a lixeira sobe quando passamos o mouse */
+.lixeira:hover {
+    transform: scale(1.05);
+}
+
+/* Cores específicas de cada lixeira */
+.papel {
+    background-color: #2563eb; /* Azul */
+}
+
+.plastico {
+    background-color: #dc2626; /* Vermelho */
+}
+
+.vidro {
+    background-color: #16a34a; /* Verde */
+}
+
+.metal {
+    background-color: #ca8a04; /* Amarelo */
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
